@@ -6,7 +6,7 @@ export default function subText({subtext}) {
             <p
                 style={{
                     fontFamily:"helvetica",
-                    fontWeight:"italic"
+                    fontWeight:"bold"
                 }}
             >
                 {subtext}    
