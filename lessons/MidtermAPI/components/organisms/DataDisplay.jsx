@@ -11,7 +11,11 @@ export default function DataDisplay({ loading, data }) {
                 {data.map((entry, i) => (
                     <article key={i} className="data-item">
                         <img src={entry.url} alt={entry.title} className="data-image" />
-                        <h3 className="data-title">{entry.title}</h3>
+                        <div  className="text">
+                            <h3 className="data-title">{entry.title}</h3>
+                            <p className="data-explanation">{entry.explanation}</p>
+                        </div>
+
                     </article>
                 ))}
             </section>

@@ -37,7 +37,34 @@
     flex-direction: column;
     gap: 2rem;
     width: 100%;
-    max-width: 800px;
+    max-width: 80vw;
+}
+
+.data-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid #ddd;
+    padding: 1rem;
+}
+
+.data-image {
+    width: 50%;
+    max-width: 400px;
+    border-radius: 8px;
+}
+
+.data-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+@media (min-width: 1900px) {
+    .data-display {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two columns */
+        gap: 2rem;
+    }
 }
 
 .data-item {
