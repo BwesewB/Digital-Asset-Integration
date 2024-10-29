@@ -17,7 +17,7 @@ import DataDisplay from '../../components/organisms/DataDisplay';
 import './styles.css';
 
 export default function Home() {
-    const DATA_URL = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&count=5";
+    const DATA_URL = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&count=6";
 
     const [astronomyData, setAstronomyData] = useState(null);
     const [loading, setLoading] = useState(false);
