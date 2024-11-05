@@ -12,7 +12,6 @@ export default function Loading() {
                 <h4 className="loading">Loading...</h4>
                 <img src="default-dance.gif"/>
             </div>
-
         </>
     )
 }
