@@ -17,17 +17,25 @@ import DataDisplay from '../../components/organisms/DataDisplay';
 import './styles.css';
 
 export default function Home() {
-    const DATA_URL = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&count=6";
+    const DATA_URL = "https://hp-api.herokuapp.com/api/characters";
 
     const [astronomyData, setAstronomyData] = useState(null);
     const [loading, setLoading] = useState(false);
+
+    function getRandomItems(array, count) {
+        const shuffled = [...array].sort(() => 0.5 - Math.random()); // Shuffle the array
+        return shuffled.slice(0, count); // Return first `count` items
+    }
 
     async function fetchAstronomyData() {
         try {
             setLoading(true);
             const response = await fetch(DATA_URL);
             const data = await response.json();
-            setAstronomyData(data);
+            const top20Data = data.slice(0, 20); // Limit to top 20 characters
+            const randomData = getRandomItems(top20Data, 6);
+            console.log("Fetched and randomized data:", randomData);
+            setAstronomyData(randomData);
             setLoading(false);
         } catch (error) {
             console.error("Error fetching data:", error);

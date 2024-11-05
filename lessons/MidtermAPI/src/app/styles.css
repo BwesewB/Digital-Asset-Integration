@@ -59,7 +59,7 @@
     font-weight: bold;
 }
 
-@media (min-width: 1900px) {
+@media (min-width: 1000px) {
     .data-display {
         display: grid;
         grid-template-columns: 1fr 1fr; /* Two columns */
@@ -76,12 +76,16 @@
 }
 
 .data-image {
-    width: 50%;
+    min-width: 50%;
     max-width: 400px;
     border-radius: 8px;
 }
 
 .data-title {
     font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.data-explanation{
     font-weight: bold;
 }
